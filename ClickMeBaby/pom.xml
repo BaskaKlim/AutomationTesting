@@ -8,6 +8,17 @@
     <artifactId>webautomationworkshop</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    
+
+
+
+    <dependency>
+        <groupId>com.codeborne</groupId>
+        <artifactId>selenide</artifactId>
+        <version>5.10.0</version>
+        <scope>test</scope>
+    </dependency>
+
+
+
 
 </project>
