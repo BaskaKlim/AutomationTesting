@@ -22,4 +22,16 @@ public class ClickMeBabyTest {
         $(byCssSelector("p.description")).shouldHave(Condition.text("klik"));
 
     }
+    @Test
+    void itShouldDisplayTwoClicks() {
+        //1. open the website
+        open("http://ajtyvit-app.westeurope.cloudapp.azure.com:8080/clickmebaby.php");
+        //2. click to button "click me baby"
+        $(byId("clickMe")).click();
+        $(byId("clickMe")).click();
+        //3. validate the number of clicks
+        $(byId("clicks")).shouldHave(Condition.text("2"));
+        //4.validate text "kliky"
+        $(byCssSelector("p.description")).shouldHave(Condition.text("kliky"));
+    }
 }
