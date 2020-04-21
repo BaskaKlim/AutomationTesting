@@ -50,4 +50,15 @@ public class ClickMeBabyTest {
         $(byCssSelector("p.description")).shouldHave(Condition.text("klikov"));
     }
 
+    @Test
+    void itShouldDisplayZeroClicks() {
+        //1. open the website
+        open("http://ajtyvit-app.westeurope.cloudapp.azure.com:8080/clickmebaby.php");
+        //2. validate the button text
+        $(byId("clickMe")).shouldHave(Condition.text("Click me !"));
+        //3. validate the number of clicks  is zero
+        $(byId("clicks")).shouldHave(Condition.text("0"));
+        //4.validate text "klikov"
+        $(byCssSelector("p.description")).shouldHave(Condition.text("klikov"));
+    }
 }
