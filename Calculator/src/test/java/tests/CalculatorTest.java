@@ -2,6 +2,7 @@
 package tests;
 
 import org.junit.jupiter.api.*;
+import org.openqa.selenium.*;
 
 import com.codeborne.selenide.*;
 
@@ -98,6 +99,17 @@ public class CalculatorTest extends TestBase{
         $(byId("result")).shouldBe(Condition.empty);
 
     }
+
+
+    @Test
+    void itShoulDisplay() {
+
+        enterFirstInput(firstNumber);
+        enterSecondInput(secondNumber);
+        $(byId("count")).click();
+        $$(By.cssSelector("ul.latest-resilts li")).shouldHave(CollectionCondition.size(1));
+    }
+
 
     void enterFirstInput(String input) {
         $(byId("firstInput")).val(input);
