@@ -10,10 +10,15 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class ClickMeBabyTest {
 
-    @Test
-    void itShouldDisplayOneClick() {
+    @BeforeEach
+    void openPage(){
         //1. open the website
         open("http://ajtyvit-app.westeurope.cloudapp.azure.com:8080/clickmebaby.php");
+    }
+
+    @Test
+    void itShouldDisplayOneClick() {
+
         //2. click to button "click me baby"
         $(byId("clickMe")).click();
         //3. validate the number of clicks
@@ -24,8 +29,6 @@ public class ClickMeBabyTest {
     }
     @Test
     void itShouldDisplayTwoClicks() {
-        //1. open the website
-        open("http://ajtyvit-app.westeurope.cloudapp.azure.com:8080/clickmebaby.php");
         //2. click to button "click me baby"
         $(byId("clickMe")).click();
         $(byId("clickMe")).click();
@@ -38,8 +41,6 @@ public class ClickMeBabyTest {
 
     @Test
     void itShouldDisplay5Clicks() {
-        //1. open the website
-        open("http://ajtyvit-app.westeurope.cloudapp.azure.com:8080/clickmebaby.php");
         //2. click to button "click me baby"
         for (int i = 0; i < 5; i++) {
             $(byId("clickMe")).click();
@@ -52,8 +53,6 @@ public class ClickMeBabyTest {
 
     @Test
     void itShouldDisplayZeroClicks() {
-        //1. open the website
-        open("http://ajtyvit-app.westeurope.cloudapp.azure.com:8080/clickmebaby.php");
         //2. validate the button text
         $(byId("clickMe")).shouldHave(Condition.text("Click me !"));
         //3. validate the number of clicks  is zero
