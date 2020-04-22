@@ -52,12 +52,24 @@ public class ClickMeBabyTest {
     }
 
     @Test
-    void itShouldDisplayZeroClicks() {
-        //2. validate the button text
-        $(byId("clickMe")).shouldHave(Condition.text("Click me !"));
-        //3. validate the number of clicks  is zero
+    void itShouldDisplayZeroClicksOnPageOpen() {
+        open("http://ajtyvit-app.westeurope.cloudapp.azure.com:8080/clickmebaby.php");
         $(byId("clicks")).shouldHave(Condition.text("0"));
-        //4.validate text "klikov"
         $(byCssSelector("p.description")).shouldHave(Condition.text("klikov"));
+    }
+
+    @Test
+    void itShouldDisplayCorrectTextForClickMeButton() {
+        open("http://ajtyvit-app.westeurope.cloudapp.azure.com:8080/clickmebaby.php");
+        $(byId("clickMe")).shouldHave(Condition.text("Click me !"));
+    }
+
+    @Test
+    void itShouldDisplayHeading() {
+        open("http://ajtyvit-app.westeurope.cloudapp.azure.com:8080/clickmebaby.php");
+        $(byCssSelector("h1"))
+                .shouldBe(Condition.visible)
+                .shouldHave(Condition.exactText("Click me baby one more time"));
+
     }
 }
