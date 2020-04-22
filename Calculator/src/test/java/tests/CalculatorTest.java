@@ -67,6 +67,34 @@ public class CalculatorTest {
         $(byId("result")).shouldHave(Condition.exactText("0.25"));
     }
 
+    @Test
+    void itShouldResretCalculatorInputs(){
+        //1.zadam cislo do prveho inputu
+        $(byId("firstInput")).val(firstNumber);
+        //2.zadam cislo do druheho inputu
+        $(byId("secondInput")).val(secondNumber);
+        //3.kliknem na tlacidlo spocitaj
+        $(byId("count")).click();
+        $(byText("vynuluj")).click();
+        $(byId("firstInput")).shouldHave(Condition.value(""));
+        $(byId("secondInput")).shouldBe(Condition.empty);
+        $(byId("firstInput")).shouldHave(Condition.attribute("placeholder","prve cislo"));
+
+    }
+
+    @Test
+    void itShouldResretCalculatorResult(){
+        //1.zadam cislo do prveho inputu
+        $(byId("firstInput")).val(firstNumber);
+        //2.zadam cislo do druheho inputu
+        $(byId("secondInput")).val(secondNumber);
+        //3.kliknem na tlacidlo spocitaj
+        $(byId("count")).click();
+        //4.overim vysledok
+        $(byText("Vynuluj")).click();
+        $(byId("result")).shouldBe(Condition.empty);
+
+    }
 
    
 }
