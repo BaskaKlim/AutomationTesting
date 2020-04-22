@@ -8,12 +8,12 @@ import com.codeborne.selenide.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class CalculatorTest {
+public class CalculatorTest extends TestBase{
 
     @BeforeEach
     void openPage() {
         //1. open the website
-        open("http://ajtyvit-app.westeurope.cloudapp.azure.com:8080/kalkulacka.php");
+        open("/kalkulacka.php");
     }
 
     String firstNumber = "1";
