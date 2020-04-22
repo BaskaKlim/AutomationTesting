@@ -9,5 +9,64 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class CalculatorTest {
+
+    @BeforeEach
+    void openPage(){
+        //1. open the website
+        open("http://ajtyvit-app.westeurope.cloudapp.azure.com:8080/kalkulacka.php");
+    }
+
+    String firstNumber ="1";
+    String secondNumber ="4";
+
+    @Test
+    void itShouldSumTwoNumbers(){
+
+        //1.zadam cislo do prveho inputu
+        $(byId("firstInput")).val(firstNumber);
+        //2.zadam cislo do druheho inputu
+        $(byId("secondInput")).val(secondNumber);
+        //3.kliknem na tlacidlo spocitaj
+        $(byId("count")).click();
+        //4.overim vysledok
+        $(byId("result")).shouldHave(Condition.exactText("5"));
+    }
+    @Test
+    void itShouldDeductTwoNumbers(){
+        //1.zadam cislo do prveho inputu
+        $(byId("firstInput")).val(firstNumber);
+        //2.zadam cislo do druheho inputu
+        $(byId("secondInput")).val(secondNumber);
+        //3.kliknem na tlacidlo spocitaj
+        $(byId("deduct")).click();
+        //4.overim vysledok
+        $(byId("result")).shouldHave(Condition.exactText("-3"));
+
+    }
+    @Test
+    void itShouldMultiplyTwoNumbers(){
+        //1.zadam cislo do prveho inputu
+        $(byId("firstInput")).val(firstNumber);
+        //2.zadam cislo do druheho inputu
+        $(byId("secondInput")).val(secondNumber);
+        //3.kliknem na tlacidlo spocitaj
+        $(byId("multiply")).click();
+        //4.overim vysledok
+        $(byId("result")).shouldHave(Condition.exactText("4"));
     
+    }
+    @Test
+    void itShouldDivideTwoNumbers(){
+        //1.zadam cislo do prveho inputu
+        $(byId("firstInput")).val(firstNumber);
+        //2.zadam cislo do druheho inputu
+        $(byId("secondInput")).val(secondNumber);
+        //3.kliknem na tlacidlo spocitaj
+        $(byId("divide")).click();
+        //4.overim vysledok
+        $(byId("result")).shouldHave(Condition.exactText("0.25"));
+    }
+
+
+   
 }
