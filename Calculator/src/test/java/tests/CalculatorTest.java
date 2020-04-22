@@ -11,56 +11,59 @@ import static com.codeborne.selenide.Selenide.*;
 public class CalculatorTest {
 
     @BeforeEach
-    void openPage(){
+    void openPage() {
         //1. open the website
         open("http://ajtyvit-app.westeurope.cloudapp.azure.com:8080/kalkulacka.php");
     }
 
-    String firstNumber ="1";
-    String secondNumber ="4";
+    String firstNumber = "1";
+    String secondNumber = "4";
 
     @Test
-    void itShouldSumTwoNumbers(){
+    void itShouldSumTwoNumbers() {
 
         //1.zadam cislo do prveho inputu
-        $(byId("firstInput")).val(firstNumber);
+        enterFirstInput(firstNumber);
         //2.zadam cislo do druheho inputu
-        $(byId("secondInput")).val(secondNumber);
+        enterSecondInput(secondNumber);
         //3.kliknem na tlacidlo spocitaj
         $(byId("count")).click();
         //4.overim vysledok
         $(byId("result")).shouldHave(Condition.exactText("5"));
     }
+
     @Test
-    void itShouldDeductTwoNumbers(){
+    void itShouldDeductTwoNumbers() {
         //1.zadam cislo do prveho inputu
-        $(byId("firstInput")).val(firstNumber);
+        enterFirstInput(firstNumber);
         //2.zadam cislo do druheho inputu
-        $(byId("secondInput")).val(secondNumber);
+        enterSecondInput(secondNumber);
         //3.kliknem na tlacidlo spocitaj
         $(byId("deduct")).click();
         //4.overim vysledok
         $(byId("result")).shouldHave(Condition.exactText("-3"));
 
     }
+
     @Test
-    void itShouldMultiplyTwoNumbers(){
+    void itShouldMultiplyTwoNumbers() {
         //1.zadam cislo do prveho inputu
-        $(byId("firstInput")).val(firstNumber);
+        enterFirstInput(firstNumber);
         //2.zadam cislo do druheho inputu
-        $(byId("secondInput")).val(secondNumber);
+        enterSecondInput(secondNumber);
         //3.kliknem na tlacidlo spocitaj
         $(byId("multiply")).click();
         //4.overim vysledok
         $(byId("result")).shouldHave(Condition.exactText("4"));
-    
+
     }
+
     @Test
-    void itShouldDivideTwoNumbers(){
+    void itShouldDivideTwoNumbers() {
         //1.zadam cislo do prveho inputu
-        $(byId("firstInput")).val(firstNumber);
+        enterFirstInput(firstNumber);
         //2.zadam cislo do druheho inputu
-        $(byId("secondInput")).val(secondNumber);
+        enterSecondInput(secondNumber);
         //3.kliknem na tlacidlo spocitaj
         $(byId("divide")).click();
         //4.overim vysledok
@@ -68,26 +71,26 @@ public class CalculatorTest {
     }
 
     @Test
-    void itShouldResretCalculatorInputs(){
+    void itShouldResretCalculatorInputs() {
         //1.zadam cislo do prveho inputu
-        $(byId("firstInput")).val(firstNumber);
+        enterFirstInput(firstNumber);
         //2.zadam cislo do druheho inputu
-        $(byId("secondInput")).val(secondNumber);
+        enterSecondInput(secondNumber);
         //3.kliknem na tlacidlo spocitaj
         $(byId("count")).click();
         $(byText("vynuluj")).click();
         $(byId("firstInput")).shouldHave(Condition.value(""));
         $(byId("secondInput")).shouldBe(Condition.empty);
-        $(byId("firstInput")).shouldHave(Condition.attribute("placeholder","prve cislo"));
+        $(byId("firstInput")).shouldHave(Condition.attribute("placeholder", "prve cislo"));
 
     }
 
     @Test
-    void itShouldResretCalculatorResult(){
+    void itShouldResretCalculatorResult() {
         //1.zadam cislo do prveho inputu
-        $(byId("firstInput")).val(firstNumber);
+        enterFirstInput(firstNumber);
         //2.zadam cislo do druheho inputu
-        $(byId("secondInput")).val(secondNumber);
+        enterSecondInput(secondNumber);
         //3.kliknem na tlacidlo spocitaj
         $(byId("count")).click();
         //4.overim vysledok
@@ -96,5 +99,12 @@ public class CalculatorTest {
 
     }
 
-   
+    void enterFirstInput(String input) {
+        $(byId("firstInput")).val(input);
+    }
+
+    void enterSecondInput(String input) {
+        $(byId("secondInput")).val(input);
+    }
+
 }
