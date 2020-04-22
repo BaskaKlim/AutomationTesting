@@ -78,7 +78,7 @@ public class CalculatorTest {
         enterSecondInput(secondNumber);
         //3.kliknem na tlacidlo spocitaj
         $(byId("count")).click();
-        $(byText("vynuluj")).click();
+        $(byText(getResetButtonText())).click();
         $(byId("firstInput")).shouldHave(Condition.value(""));
         $(byId("secondInput")).shouldBe(Condition.empty);
         $(byId("firstInput")).shouldHave(Condition.attribute("placeholder", "prve cislo"));
@@ -94,7 +94,7 @@ public class CalculatorTest {
         //3.kliknem na tlacidlo spocitaj
         $(byId("count")).click();
         //4.overim vysledok
-        $(byText("Vynuluj")).click();
+        $(byText(getResetButtonText())).click();
         $(byId("result")).shouldBe(Condition.empty);
 
     }
@@ -105,6 +105,10 @@ public class CalculatorTest {
 
     void enterSecondInput(String input) {
         $(byId("secondInput")).val(input);
+    }
+
+    private String getResetButtonText(){
+        return "Vynuluj" ;
     }
 
 }

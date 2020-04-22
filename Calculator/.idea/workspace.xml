@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/CalculatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="96" column="46" lean-forward="true" selection-start-line="96" selection-start-column="46" selection-end-line="96" selection-end-column="46" />
+            <state relative-caret-position="-241">
+              <caret line="80" column="37" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -67,8 +67,8 @@
     <option name="runMavenInBackground" value="false" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="508" />
-    <option name="y" value="34" />
+    <option name="x" value="528" />
+    <option name="y" value="42" />
     <option name="width" value="1195" />
     <option name="height" value="821" />
   </component>
@@ -127,7 +127,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587575127356" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587576255924" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -154,7 +154,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in webautomationworkshop (1)">
+  <component name="RunManager" selected="JUnit.CalculatorTest.itShouldResretCalculatorInputs">
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -192,26 +192,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest.itShouldMultiplyTwoNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="webautomationworkshop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CalculatorTest" />
-      <option name="METHOD_NAME" value="itShouldMultiplyTwoNumbers" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CalculatorTest.itShouldResretCalculator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="webautomationworkshop" />
       <extension name="coverage">
@@ -223,6 +203,26 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.CalculatorTest" />
       <option name="METHOD_NAME" value="itShouldResretCalculator" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorTest.itShouldResretCalculatorInputs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="webautomationworkshop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CalculatorTest" />
+      <option name="METHOD_NAME" value="itShouldResretCalculatorInputs" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -276,11 +276,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CalculatorTest.itShouldResretCalculatorInputs" />
         <item itemvalue="JUnit.All in webautomationworkshop (1)" />
         <item itemvalue="JUnit.All in webautomationworkshop" />
         <item itemvalue="JUnit.CalculatorTest.itShouldResretCalculatorResult" />
         <item itemvalue="JUnit.CalculatorTest.itShouldResretCalculator" />
-        <item itemvalue="JUnit.CalculatorTest.itShouldMultiplyTwoNumbers" />
       </list>
     </recent_temporary>
   </component>
@@ -297,20 +297,11 @@
       <workItem from="1587404210793" duration="5626000" />
       <workItem from="1587568389488" duration="706000" />
       <workItem from="1587569154839" duration="110000" />
-      <workItem from="1587569307528" duration="4681000" />
+      <workItem from="1587569307528" duration="5901000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CalculatorTest_itShouldDeductTwoNumbers - 2020.04.22 at 18h 05m 19s.xml">
-      <configuration name="CalculatorTest.itShouldDeductTwoNumbers" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CalculatorTest_itShouldDeductTwoNumbers - 2020.04.22 at 18h 06m 15s.xml">
-      <configuration name="CalculatorTest.itShouldDeductTwoNumbers" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CalculatorTest_itShouldMultiplyTwoNumbers - 2020.04.22 at 18h 06m 39s.xml">
-      <configuration name="CalculatorTest.itShouldMultiplyTwoNumbers" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CalculatorTest_itShouldMultiplyTwoNumbers - 2020.04.22 at 18h 07m 30s.xml">
       <configuration name="CalculatorTest.itShouldMultiplyTwoNumbers" configurationId="JUnit" />
     </history-entry>
@@ -332,14 +323,24 @@
     <history-entry file="CalculatorTest_itShouldResretCalculatorResult - 2020.04.22 at 18h 32m 11s.xml">
       <configuration name="CalculatorTest.itShouldResretCalculatorResult" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_webautomationworkshop - 2020.04.22 at 19h 04m 00s.xml">
+      <configuration name="All in webautomationworkshop" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_webautomationworkshop_(1) - 2020.04.22 at 19h 05m 58s.xml">
+      <configuration name="All in webautomationworkshop (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalculatorTest_itShouldResretCalculatorInputs - 2020.04.22 at 19h 23m 14s.xml">
+      <configuration name="CalculatorTest.itShouldResretCalculatorInputs" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17157000" />
+    <option name="totallyTimeSpent" value="18377000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="508" y="34" width="1195" height="821" extended-state="0" />
+    <frame x="528" y="42" width="1195" height="821" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13443191" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13443191" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -349,7 +350,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30452675" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30452675" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39970282" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -423,8 +424,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/CalculatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="96" column="46" lean-forward="true" selection-start-line="96" selection-start-column="46" selection-end-line="96" selection-end-column="46" />
+        <state relative-caret-position="-241">
+          <caret line="80" column="37" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
         </state>
       </provider>
     </entry>
