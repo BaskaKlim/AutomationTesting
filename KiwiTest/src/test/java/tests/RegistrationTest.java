@@ -10,11 +10,7 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationTest extends TestBase {
-
-    @BeforeEach
-    void openPage() {
-        Configuration.holdBrowserOpen = true;
-    }
+    
 
     @Test
     void itShouldDisplaySuggestedTrip() {
