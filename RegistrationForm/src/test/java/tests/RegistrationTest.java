@@ -1,9 +1,7 @@
 
 package tests;
 
-import java.util.concurrent.*;
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.*;
 
 import com.codeborne.selenide.*;
 
@@ -44,7 +42,7 @@ public class RegistrationTest extends TestBase {
         //TODO: 7. click registruj batton
         pressRegistrationButton();
         //TODO: 8. over hlasku
-        validateSuccess();
+        validRegistration();
     }
 
     @Test
@@ -64,7 +62,7 @@ public class RegistrationTest extends TestBase {
         //TODO: 7. click registruj button
         pressRegistrationButton();
         //TODO: 8. over hlasku
-        validateSuccess();
+        invalidRegistration();
     }
 
     /**
@@ -101,11 +99,17 @@ public class RegistrationTest extends TestBase {
         $(byCssSelector("button.btn-success")).click();
     }
 
-    void validateSuccess(){
+    void validRegistration() {
         $("div.alert-success").
                 shouldBe(Condition.visible).
                 shouldHave(Condition.exactText("Registracia uspesna!"));
 
     }
 
+    void invalidRegistration() {
+        $("div.alert-danger").
+                shouldBe(Condition.visible).
+                shouldHave(Condition.exactText("Registracia neuspesna!"));
+
+    }
 }
