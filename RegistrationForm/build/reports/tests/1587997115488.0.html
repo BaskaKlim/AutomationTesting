@@ -1,0 +1,148 @@
+<html><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Women tester academy</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css"><style>
+    body {
+        background-color: #f6f6f6;
+    }
+
+    div.result {
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-family: Montserrat, serif;
+        font-size: 50px;
+        margin-bottom: 50px;
+        color: #4c4c4c;
+    }
+
+    input.form-control {
+        border: 1px solid;
+        border-color: #dfdfdf #eeeeee #eeeeee #dfdfdf;
+    }
+
+    .checkbox {
+        padding-left: 20px;
+    }
+
+    .checkbox label {
+        display: inline-block;
+        position: relative;
+        padding-left: 5px;
+    }
+
+    .checkbox label::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        left: 0;
+        margin-left: -20px;
+        border: 1px solid #cccccc;
+        border-radius: 3px;
+        background-color: #fff;
+        -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+        -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+        transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    }
+
+    .checkbox label::after {
+        display: inline-block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        left: 0;
+        top: 0;
+        margin-left: -20px;
+        padding-left: 3px;
+        padding-top: 1px;
+        font-size: 11px;
+        color: #555555;
+    }
+
+    .checkbox input[type="checkbox"] {
+        opacity: 0;
+    }
+
+    .checkbox input[type="checkbox"]:focus + label::before {
+        outline: thin dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
+
+    .checkbox input[type="checkbox"]:checked + label::after {
+        font-family: 'FontAwesome';
+        content: "\f00c";
+    }
+
+    .checkbox input[type="checkbox"]:disabled + label {
+        opacity: 0.65;
+    }
+
+    .checkbox input[type="checkbox"]:disabled + label::before {
+        background-color: #eeeeee;
+        cursor: not-allowed;
+    }
+
+    .checkbox.checkbox-circle label::before {
+        border-radius: 50%;
+    }
+
+    div.checkbox {
+        color: #818181;
+    }
+</style></head>
+
+
+
+
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.php">WTA</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a href="clickmebaby.php">Click me baby</a></li><li class="active"><a href="registracia.php">Registracia</a></li><li><a href="kalkulacka.php">Kalkulacka</a></li><li><a href="odkazovac.php">Odkazovac</a></li><li><a href="cyberpunk_registration.php">Cyberpunk_registration</a></li>    </ul>
+  </div>
+</nav><div class="container">
+    <h1 class="text-center">Registracia</h1>
+    <div class="col-md-4 col-md-offset-4">
+        <form action="" method="POST">
+            <div class="form-group ">
+                <input type="email" class="form-control" name="email" placeholder="Email" value="">
+            </div>
+            <div class="form-group ">
+                <input type="text" class="form-control" name="name" placeholder="Meno" value="">
+            </div>
+            <div class="form-group ">
+                <input type="text" class="form-control" name="surname" placeholder="Priezvisko" value="">
+            </div>
+            <div class="form-group ">
+                <input type="password" class="form-control" name="password" placeholder="Heslo">
+            </div>
+            <div class="form-group ">
+                <input type="password" class="form-control" name="password-repeat" placeholder="Heslo znovu">
+            </div>
+            <div class="checkbox form-group">
+                <input id="checkbox" name="robot" type="checkbox" class="checkbox" required="">
+                <label for="checkbox">
+                    Som robot
+                </label>
+            </div>
+            <button type="submit" class="btn btn-success btn-lg btn-block">Registruj sa</button>
+        </form>
+        <div class="result text-center">
+                    </div>
+    </div>
+</div>
+
+
+</body></html>
