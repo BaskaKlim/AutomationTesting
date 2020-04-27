@@ -39,5 +39,19 @@ public class RegistrationTest extends TestBase {
 
     }
 
+    @Test
+    void itShouldDisplayDestinationFromKE(){
+        open("https://www.kiwi.com/en/");
+
+        // TODO: cookies
+        Cookie cookie = new Cookie("cookie_consent", "agreed");
+        WebDriverRunner.getWebDriver().manage().addCookie(cookie);
+        refresh();
+        
+        //TODO: popup windows clicked by finding elements by text
+        $(byText("I understand")).click();
+
+    }
+
 }
 

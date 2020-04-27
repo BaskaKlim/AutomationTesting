@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/RegistrationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-115">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="202">
+              <caret line="42" column="43" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -129,7 +129,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588015992922" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588020132711" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -311,7 +311,7 @@
       <workItem from="1587994199837" duration="12000" />
       <workItem from="1587994298713" duration="3004000" />
       <workItem from="1587997485960" duration="5256000" />
-      <workItem from="1588003809964" duration="8015000" />
+      <workItem from="1588003809964" duration="8192000" />
     </task>
     <servers />
   </component>
@@ -348,7 +348,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37797000" />
+    <option name="totallyTimeSpent" value="37974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="23" width="1323" height="821" extended-state="0" />
@@ -466,8 +466,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/RegistrationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="202">
+          <caret line="42" column="43" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="43" />
         </state>
       </provider>
     </entry>
