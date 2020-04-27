@@ -60,9 +60,18 @@ public class RegistrationTest extends TestBase {
         $(byAttribute("data-test", "PlacePickerRow-city")).hover().click();
         //click button Explore and searching connections
         $(byText("Explore")).click();
-        
+
+
+        // click to first finded destination
+        $(byAttribute("data-test", "PictureCardContent")).click();
+        //wait until result of action will be visible
+        $(byAttribute("data-test", "ResultCardWrapper"))
+                .waitUntil(Condition.visible, 10000);
+        // for each atribute price, print it itno console 
+        $$(byAttribute("data-test", "ResultCardPrice")).forEach(element -> System.out.println(element.getText()));
+    }
 
 }
 
-}
+
 
