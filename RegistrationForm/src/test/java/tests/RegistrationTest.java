@@ -16,7 +16,9 @@ public class RegistrationTest extends TestBase {
     void openPage() {
         //1. open the website
         open("/registracia.php");
-        //Configuration.timeout = 6000;
+        Configuration.timeout = 6000;
+        //javascript configuracia na clickatelny checkbox
+        Configuration.clickViaJs = true;
     }
 
     String firstName = "Barbara";
@@ -38,9 +40,11 @@ public class RegistrationTest extends TestBase {
         enterPasswordInput(password);
         enterPasswordRepeatInput(password);
         //TODO: 6. zaklikni som robot
+        ceckRobotCheckBox();
         //TODO: 7. click registruj batton
         pressRegistrationButton();
-
+        //TODO: 8. over hlasku
+        validateSuccess();
     }
 
     @Test
@@ -56,8 +60,11 @@ public class RegistrationTest extends TestBase {
         enterPasswordInput(wrongPassword);
         enterPasswordRepeatInput(wrongPassword);
         //TODO: 6. zaklikni som robot
-        //TODO: 7. click registruj batton
+        ceckRobotCheckBox();
+        //TODO: 7. click registruj button
         pressRegistrationButton();
+        //TODO: 8. over hlasku
+        validateSuccess();
     }
 
     /**
@@ -65,7 +72,7 @@ public class RegistrationTest extends TestBase {
      **/
 
     void enterEmailInput(String input) {
-        $(By.xpath("//form/div[1]/input")).val(input);
+        $(byXpath("//form/div[1]/input")).val(input);
     }
 
     void enterFirstNameInput(String input) {
@@ -84,13 +91,21 @@ public class RegistrationTest extends TestBase {
         $(byName("password-repeat")).val(input);
     }
 
-   /* void ceckRobotCheckBox() {
+    void ceckRobotCheckBox() {
+        /** checkbox hlasi chybu, ze checkbox nie je clicable element, pretoze sa prekryvaju s label... **/
         $(byCssSelector("input#checkbox")).click();
+        // $(byAttribute("name","robot")).click();
     }
-   */
 
     void pressRegistrationButton() {
         $(byCssSelector("button.btn-success")).click();
+    }
+
+    void validateSuccess(){
+        $("div.alert-success").
+                shouldBe(Condition.visible).
+                shouldHave(Condition.exactText("Registracia uspesna!"));
+
     }
 
 }
