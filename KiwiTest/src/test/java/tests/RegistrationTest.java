@@ -52,6 +52,8 @@ public class RegistrationTest extends TestBase {
         $(byAttribute("data-test", "PlacePickerInputPlace-close")).click();
         //find input field end enter value Kosice
         $(byAttribute("data-test", "SearchField-input")).val("Košice");
+        //check if rollup options are visible / its not nessessary but it can be fail without it when you have fast OS
+        $(byAttribute("tabindex", "kosice_sk")).shouldBe(Condition.visible);
         // choose from rollups option first one with clickable checkbox, hover must be add / bez toho to nejde
         $(byAttribute("data-test", "PlacePickerRow-city")).hover().click();
         //click button Explore and searching connections
