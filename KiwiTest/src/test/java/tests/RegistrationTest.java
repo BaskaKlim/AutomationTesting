@@ -40,18 +40,29 @@ public class RegistrationTest extends TestBase {
     }
 
     @Test
-    void itShouldDisplayDestinationFromKE(){
+    void itShouldDisplayDestinationFromKE() {
         open("https://www.kiwi.com/en/");
 
         // TODO: cookies
         Cookie cookie = new Cookie("cookie_consent", "agreed");
         WebDriverRunner.getWebDriver().manage().addCookie(cookie);
         refresh();
-        
+
         //TODO: popup windows clicked by finding elements by text
         $(byText("I understand")).click();
 
-    }
+        //TODO: change default location to Kosice, choose first destination, show results and write price to console
+        //close x button with location
+        $(byAttribute("data-test", "PlacePickerInputPlace-close")).click();
+        //find input field end enter value Kosice
+        $(byAttribute("data-test", "SearchField-input")).val("Košice");
+        // choose from rollups option first one with clickable checkbox, hover must be add / bez toho to nejde
+        $(byAttribute("data-test", "PlacePickerRow-city")).hover().click();
+        //click button Explore and searching connections
+        $(byText("Explore")).click();
+        
+
+}
 
 }
 
