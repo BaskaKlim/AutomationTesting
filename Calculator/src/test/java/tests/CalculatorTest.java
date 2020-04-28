@@ -2,6 +2,8 @@
 package tests;
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.*;
+import org.junit.jupiter.params.provider.*;
 import org.openqa.selenium.*;
 
 import com.codeborne.selenide.*;
@@ -17,11 +19,17 @@ public class CalculatorTest extends TestBase{
         open("/kalkulacka.php");
     }
 
-    String firstNumber = "1";
-    String secondNumber = "4";
+    String firstNum = "1";
+    String secondNum = "4";
 
-    @Test
-    void itShouldSumTwoNumbers() {
+    @ParameterizedTest(name = "{0} + {1} = {2}")
+    @CsvSource({
+            "1, 2, 3",
+            "2, 5, 7",
+            "4, 8, 12"
+    })
+
+    void itShouldSumTwoNumbersParametrized(String firstNumber, String secondNumber, String result) {
 
         //1.zadam cislo do prveho inputu
         enterFirstInput(firstNumber);
@@ -30,15 +38,15 @@ public class CalculatorTest extends TestBase{
         //3.kliknem na tlacidlo spocitaj
         $(byId("count")).click();
         //4.overim vysledok
-        $(byId("result")).shouldHave(Condition.exactText("5"));
+        $(byId("result")).shouldHave(Condition.exactText(result));
     }
 
     @Test
     void itShouldDeductTwoNumbers() {
         //1.zadam cislo do prveho inputu
-        enterFirstInput(firstNumber);
+        enterFirstInput(firstNum);
         //2.zadam cislo do druheho inputu
-        enterSecondInput(secondNumber);
+        enterSecondInput(secondNum);
         //3.kliknem na tlacidlo spocitaj
         $(byId("deduct")).click();
         //4.overim vysledok
@@ -49,9 +57,9 @@ public class CalculatorTest extends TestBase{
     @Test
     void itShouldMultiplyTwoNumbers() {
         //1.zadam cislo do prveho inputu
-        enterFirstInput(firstNumber);
+        enterFirstInput(firstNum);
         //2.zadam cislo do druheho inputu
-        enterSecondInput(secondNumber);
+        enterSecondInput(secondNum);
         //3.kliknem na tlacidlo spocitaj
         $(byId("multiply")).click();
         //4.overim vysledok
@@ -62,9 +70,9 @@ public class CalculatorTest extends TestBase{
     @Test
     void itShouldDivideTwoNumbers() {
         //1.zadam cislo do prveho inputu
-        enterFirstInput(firstNumber);
+        enterFirstInput(firstNum);
         //2.zadam cislo do druheho inputu
-        enterSecondInput(secondNumber);
+        enterSecondInput(secondNum);
         //3.kliknem na tlacidlo spocitaj
         $(byId("divide")).click();
         //4.overim vysledok
@@ -74,9 +82,9 @@ public class CalculatorTest extends TestBase{
     @Test
     void itShouldResretCalculatorInputs() {
         //1.zadam cislo do prveho inputu
-        enterFirstInput(firstNumber);
+        enterFirstInput(firstNum);
         //2.zadam cislo do druheho inputu
-        enterSecondInput(secondNumber);
+        enterSecondInput(secondNum);
         //3.kliknem na tlacidlo spocitaj
         $(byId("count")).click();
         $(byText(getResetButtonText())).click();
@@ -89,9 +97,9 @@ public class CalculatorTest extends TestBase{
     @Test
     void itShouldResretCalculatorResult() {
         //1.zadam cislo do prveho inputu
-        enterFirstInput(firstNumber);
+        enterFirstInput(firstNum);
         //2.zadam cislo do druheho inputu
-        enterSecondInput(secondNumber);
+        enterSecondInput(secondNum);
         //3.kliknem na tlacidlo spocitaj
         $(byId("count")).click();
         //4.overim vysledok
@@ -104,8 +112,8 @@ public class CalculatorTest extends TestBase{
     @Test
     void itShoulDisplay() {
 
-        enterFirstInput(firstNumber);
-        enterSecondInput(secondNumber);
+        enterFirstInput(firstNum);
+        enterSecondInput(secondNum);
         $(byId("count")).click();
         $$(By.cssSelector("ul.latest-resilts li")).shouldHave(CollectionCondition.size(1));
     }
